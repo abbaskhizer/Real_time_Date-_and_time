@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date And Time</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="bg-white border-b">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <!-- Left: Logo -->
+                    <a href="#" class="flex items-center gap-2 font-bold text-slate-900">
+                        <span
+                            class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white">A</span>
+                        <span>Date And Time Logo</span>
+                    </a>
+
+                    <!-- Desktop Links -->
+                    <div class="hidden md:flex items-center gap-8">
+                        <a class="text-slate-700 hover:text-slate-900" href="#">Home</a>
+                        <a class="text-slate-700 hover:text-slate-900" href="#">About</a>
+                        <a class="text-slate-700 hover:text-slate-900" href="#">Services</a>
+                        <a class="text-slate-700 hover:text-slate-900" href="#">Contact</a>
+                    </div>
+
+                    <!-- Right: CTA + Mobile button -->
+                    <div class="flex items-center gap-3">
+                        <a href="#"
+                            class="hidden sm:inline-flex rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+                            Sign in
+                        </a>
+
+                        <button id="menuBtn"
+                            class="md:hidden inline-flex items-center justify-center rounded-xl border px-3 py-2 hover:bg-slate-50"
+                            aria-label="Open menu">
+                            <!-- hamburger -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="md:hidden hidden pb-4">
+                    <div class="space-y-2">
+                        <a class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50" href="#">Home</a>
+                        <a class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50" href="#">About</a>
+                        <a class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50" href="#">Services</a>
+                        <a class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50" href="#">Contact</a>
+                        <a class="block rounded-lg px-3 py-2 font-semibold text-white bg-slate-900 hover:bg-slate-800"
+                            href="#">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="px-4 py-6">
+        <div class="flex justify-center">
+            <div id="clockBox" class="w-full max-w-[1000px] h-[400px] border bg-slate-900 text-white rounded-xl p-6
+             flex flex-col items-center justify-center gap-3">
+
+                <!-- Title -->
+                <h2 class="text-2xl font-extrabold tracking-wide">Live Date & Time</h2>
+
+                <!-- Time + Date -->
+                <div class="text-center">
+                    <div class="text-5xl font-extrabold" id="timeText">--:--:--</div>
+                    <div class="mt-1 text-lg text-slate-300" id="dateText">Loading...</div>
+                </div>
+
+                <!-- Description -->
+                <p class="text-sm text-slate-400 max-w-2xl text-center">
+                    This section displays your current system time and date in real time.
+                    Use the button below to switch between 12-hour and 24-hour formats.
+                </p>
+
+                <!-- Button -->
+                <button id="timeFormat"
+                    class="mt-1 px-4 py-2 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-200 transition">
+                    Switch to 24-hour
+                </button>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
